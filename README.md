@@ -1,2 +1,0 @@
-# ashinityrealestatebackend
-realestate
