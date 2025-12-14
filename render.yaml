@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ashinity-app
+    env: python
+    branch: main
+    dockerfilePath: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port 10000"
+    plan: free
+    autoDeploy: true
+    # Post-deploy DB migrations can be run via Render hooks or using Web Shell.
+    # Do NOT store secrets here; configure them in the Render dashboard.
